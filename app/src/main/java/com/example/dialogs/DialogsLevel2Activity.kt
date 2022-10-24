@@ -1,4 +1,6 @@
 package com.example.dialogs
 
-class DialogsLevel2Activity {
+import androidx.appcompat.app.AppCompatActivity
+
+class DialogsLevel2Activity: AppCompatActivity() {
 }
