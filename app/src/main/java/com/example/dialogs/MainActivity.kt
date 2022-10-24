@@ -18,7 +18,7 @@ class MainActivity: AppCompatActivity() {
             startActivity(Intent(this, DialogsLevel1Activity::class.java))
         }
 
-        binding.level1Button.setOnClickListener {
+        binding.level2Button.setOnClickListener {
             startActivity(Intent(this, DialogsLevel2Activity::class.java))
         }
 
