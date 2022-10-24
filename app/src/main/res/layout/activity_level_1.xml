@@ -30,8 +30,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/alert_dialog_default"
-            android:textAllCaps="false"
             android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/alertDialogSingleChoiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_dialog_single_choice"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/currentVolumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:textSize="16sp"
+            android:layout_marginTop="32dp"
+            tools:text="Current Volume: 50%"/>
+
 
     </LinearLayout>
 

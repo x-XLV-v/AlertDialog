@@ -9,10 +9,14 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dialogs.databinding.ActivityLevel1Binding
+import com.example.dialogs.entities.AvailableVolumeValues
+import kotlin.properties.Delegates.notNull
 
 class DialogsLevel1Activity: AppCompatActivity() {
 
     private lateinit var binding: ActivityLevel1Binding
+
+    private var volume by notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +26,17 @@ class DialogsLevel1Activity: AppCompatActivity() {
         binding.alertDialogDefaultButton.setOnClickListener {
             showAlertDialog()
         }
+
+        binding.alertDialogSingleChoiceButton.setOnClickListener {
+            showSingleChoiceAlertDialog()
+        }
+
+        volume = savedInstanceState?.getInt(KEY_VOLUME) ?: 50
+
+        updateUi()
     }
+
+    //----------------------------Alert Dialog Default----------------------------//
 
     private fun showAlertDialog() {
         val listener = DialogInterface.OnClickListener { _, which ->
@@ -34,7 +48,6 @@ class DialogsLevel1Activity: AppCompatActivity() {
                 }
             }
         }
-
 
         val dialog = AlertDialog.Builder(this)
             .setCancelable(true)
@@ -57,5 +70,33 @@ class DialogsLevel1Activity: AppCompatActivity() {
 
     private fun showToast(@StringRes messageRes: Int) {
         Toast.makeText(this, messageRes, Toast.LENGTH_SHORT).show()
+    }
+
+    //----------------------------Alert Dialog Single Choice----------------------------//
+
+    private fun showSingleChoiceAlertDialog() {
+        val volumeItems = AvailableVolumeValues.createVolumeValues(volume)
+        val volumeTextItems = volumeItems.values
+            .map { getString(R.string.volume_description, it) }
+            .toTypedArray()
+
+        val dialog = AlertDialog.Builder(this)
+            .setTitle(R.string.volume_setup)
+            .setSingleChoiceItems(volumeTextItems, volumeItems.currentIndex) { dialog, which ->
+                volume = volumeItems.values[which]
+                updateUi()
+                dialog.dismiss()
+            }
+            .create()
+        dialog.show()
+    }
+
+
+    private fun updateUi() {
+        binding.currentVolumeTextView.text = getString(R.string.current_volume, volume)
+    }
+
+    companion object {
+        @JvmStatic private val KEY_VOLUME = "KEY_VOLUME"
     }
 }
