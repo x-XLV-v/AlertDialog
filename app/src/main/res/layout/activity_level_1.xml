@@ -39,6 +39,27 @@
             android:text="@string/alert_dialog_single_choice"
             android:layout_marginTop="16dp"/>
 
+        <Button
+            android:id="@+id/alertDialogSingleChoiceWithConfirmationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_dialog_single_choice_with_confirmation"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/alertDialogMultipleChoiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_dialog_multiple_choice"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/alertDialogMultipleChoiceWithConfirmationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_dialog_multiple_choice_with_confirmation"
+            android:layout_marginTop="16dp"/>
+
         <TextView
             android:id="@+id/currentVolumeTextView"
             android:layout_width="wrap_content"
@@ -49,6 +70,38 @@
             android:layout_marginTop="32dp"
             tools:text="Current Volume: 50%"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:id="@+id/currentColorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textSize="16sp"
+                android:text="@string/current_color"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/black"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/colorView"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="#00ff00"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
