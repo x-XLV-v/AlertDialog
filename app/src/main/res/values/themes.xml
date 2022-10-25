@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/DefaultButton</item>
     </style>
 
     <style name="DefaultButton" parent="Widget.MaterialComponents.Button">
