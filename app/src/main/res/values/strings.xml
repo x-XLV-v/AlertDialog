@@ -21,12 +21,16 @@
     <string name="action_close">Close</string>
     
     <string name="alert_dialog_level_1">Alert Dialog, Level 1</string>
+    <string name="alert_dialog_level_2">Alert Dialog, Level 2</string>
     <string name="alert_dialog_default">Alert Dialog (default)</string>
     <string name="alert_dialog_single_choice">Alert Dialog (single choice)</string>
     <string name="alert_dialog_single_choice_with_confirmation">Alert Dialog (single choice with confirmation)</string>
     <string name="alert_dialog_multiple_choice">Alert Dialog (multiple choice)</string>
     <string name="alert_dialog_multiple_choice_with_confirmation">Alert Dialog (multiple choice with confirmation)</string>
+    <string name="alert_dialog_custom_view">Alert Dialog (custom view)</string>
+    <string name="alert_dialog_custom_single_choice_view">Alert Dialog (single choice, custom)</string>
     <string name="current_color">Current Color:</string>
+    <string name="alert_dialog_input_and_validation">Alert Dialog (input and validation)</string>
 
 
     <string name="uninstall_confirmed">Yeah! Your Android will be removed soon</string>
@@ -34,6 +38,11 @@
     <string name="uninstall_ignored">Ignored</string>
     <string name="level">Level:</string>
     <string name="volume_setup">Volume setup</string>
+    <string name="volume_setup_message">Please specify the desired volume</string>
+    <string name="current_volume_50">Current Volume: 50%</string>
+    <string name="enter_volume">Enter volume</string>
+    <string name="empty_value">Value is empty</string>
+    <string name="invalid_value">Invalid value</string>
 
 
 
